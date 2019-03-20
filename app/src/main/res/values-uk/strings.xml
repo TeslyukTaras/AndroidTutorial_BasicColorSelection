@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AndroidTutorial_BasicColorSelection</string>
+
+    <string name="hello_world">Привіт світ!!!</string>
+    <string name="action_settings">Налаштування</string>
+    <string name="select_color">Виберіть колір</string>
+    <string name="color_red">Червоний</string>
+    <string name="color_green">Зелений</string>
+    <string name="color_blue">Синій</string>
+</resources>

@@ -67,7 +67,7 @@ class MainActivity : Activity(), SeekBar.OnSeekBarChangeListener, View.OnClickLi
         buttonIndigo = findViewById(R.id.main_button_indigo)
         buttonViolet = findViewById(R.id.main_button_violet)
 
-        textColor = findViewById<View>(R.id.main_current_color) as TextView
+        textColor = findViewById(R.id.main_current_color)
 
         red = 0
         green = 0
@@ -102,45 +102,25 @@ class MainActivity : Activity(), SeekBar.OnSeekBarChangeListener, View.OnClickLi
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.main_button_red -> {
-                red = 255
-                green = 0
-                blue = 0
-            }
-            R.id.main_button_orange -> {
-                red = 255
-                green = 127
-                blue = 0
-            }
-            R.id.main_button_yellow -> {
-                red = 255
-                green = 255
-                blue = 0
-            }
-            R.id.main_button_green -> {
-                red = 0
-                green = 255
-                blue = 0
-            }
-            R.id.main_button_blue -> {
-                red = 0
-                green = 0
-                blue = 255
-            }
-            R.id.main_button_indigo -> {
-                red = 75
-                green = 0
-                blue = 130
-            }
-            R.id.main_button_violet -> {
-                red = 143
-                green = 0
-                blue = 255
-            }
+            R.id.main_button_red -> setColors(255, 0, 0)
+            R.id.main_button_orange -> setColors(255, 127, 0)
+            R.id.main_button_yellow -> setColors(255, 255, 0)
+            R.id.main_button_green -> setColors(0, 255, 0)
+            R.id.main_button_blue -> setColors(0, 0, 255)
+            R.id.main_button_indigo -> setColors(75, 0, 130)
+            R.id.main_button_violet -> setColors(143, 0, 255)
         }
 
         barRed.progress = red
         barGreen.progress = green
         barBlue.progress = blue
+    }
+
+    private fun setColors(red: Int,
+                          green: Int,
+                          blue: Int) {
+        this.red = red
+        this.green = green
+        this.blue = blue
     }
 }
