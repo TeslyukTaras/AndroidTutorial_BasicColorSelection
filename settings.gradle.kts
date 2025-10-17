@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "TestConfig"
+rootProject.name = "BasicColorSelector"
 include(":app")
